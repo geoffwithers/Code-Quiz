@@ -5,52 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="script.js"></script>
     <title>Coding Quiz</title>
 </head>
 
 <body>
+    <div class="timer">Time:<span id="timer-text"></span>
+    </div>
+    <header id="header">
+        <div class="large-font">Coding Quiz</div>
+        <p>Answer all questions before time runs out!</p>
+    </header>
+    
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-btns" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
+    </div>
+    <div class="score controls hide" id="score">
+        <input id="submit-score">
+        <button id="submit-btn" class="btn">Submit</button>
 
-<!--Quiz Questions:
-1. Which of the following HTML elements is used to define a paragraph?
-a) <body> b) <header> c) <h1> d) <p>
-
-2. Which of the following tags is used to transform text into a bold version?
-a) <blockquote> b) <em> c) <a> d) <strong>
-
-3. In JavaScript, what is the type of loop that continues as long as the specified condition remains TRUE?
-a) Fort Loop b) Conditional Loop c) While Loop d) Else Loop
-
-4. What is a JavaScript element that represents either TRUE or FALSE values?
-a) Boolean b) String c) Conditional d) Variable
-
-5. In JavaScript, what element is used to store and manipulate text?
-a) Arrays b) Functions c) Variables d) Strings
-
-6. What does the "C" in "CSS" stand for?
-a) Calculating b) Cascading c) Crusading d) Colorful
-
-7. What CSS property is used to round the edges of a border?
-a) Border-Round b) Border-Curve c) Border-Radius d) Border-Percent
-
-8. What does API stand for?
-a) Always Program Inside b) Actions Prevent Ineptitude 
-c) All People Included d) Application Programming Interface
-
-9. What is the name of the CSS design that calls for adaptable elements based on the device resolution or screen size?
-a) Responsive b) Evolution c) Shifting d) Cascading
-
-10. What is the name of the stylesheet that defines the presentation of an HTML document?
-a) PHP b) CSS c) JavaScript d) API
-
--->
-
-
-
-
-
-
-
-
+    </div>
 
 
 

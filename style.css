@@ -1,0 +1,75 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    border-color: black;
+    border-width: 5px;
+} 
+
+.btn-grid {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: purple;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: rgb(209, 36, 189);
+    cursor: grab;
+}
+
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+    background: darkblue;
+    color: white;
+    border-bottom: 30px;
+    border-radius: 5px;
+}
+
+.timer {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    color: red;
+}
