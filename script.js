@@ -68,7 +68,7 @@ function selectAnswer(e) {
     if (correct) {
         alert('Correct!')
     } else {
-        alert('Wrong!')
+        alert('Wrong...')
         timeRemaining= timeRemaining - 10
     }
     setStatusClass(document.body, correct)
@@ -82,6 +82,7 @@ function selectAnswer(e) {
         startButton.classList.remove('hide')
         clearInterval(timerId)
         submitButton.classList.remove('hide')
+        
         
     }  
 }
@@ -113,7 +114,7 @@ var questions = [
     {
         question: 'Which of the following tags is used to transform text into a bold version?',
         answers: [
-            {text: '<blockquote', correct: false},
+            {text: '<blockquote>', correct: false},
             {text: '<em>', corect: false},
             {text: '<loud>', correct: false},
             {text: '<strong>', correct: true}
@@ -193,6 +194,6 @@ var questions = [
     }
 ]
 
-var timeRemaining = questions.length * 15
+var timeRemaining = questions.length * 10
 
 var timerElement = document.getElementById('timer-text')

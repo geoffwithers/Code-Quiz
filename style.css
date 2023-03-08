@@ -3,15 +3,24 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.timer {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    color: black;
+    font-weight: bold;
+}
+
 body {
     padding: 0;
     margin: 0;
     display: flex;
-    width: 100vw;
-    height: 100vh;
     justify-content: center; 
     align-items: center;
+    width: 100vw;
+    height: 100vh;
     flex-direction: column;
+
 }
 
 .container {
@@ -21,6 +30,7 @@ body {
     padding: 10px;
     border-color: black;
     border-width: 5px;
+
 } 
 
 .btn-grid {
@@ -67,9 +77,14 @@ header {
     border-radius: 5px;
 }
 
-.timer {
+.correct h2 {
     display: flex;
-    align-items: right;
-    justify-content: right;
+    display: inline;
+    color: green;
+}
+
+.wrong h2 {
+    display: flex;
+    display: inline;
     color: red;
 }
