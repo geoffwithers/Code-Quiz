@@ -3,14 +3,19 @@ var nextButton = document.getElementById('next-btn')
 var questionContainerElement = document.getElementById('question-container')
 var headerElement = document.getElementById('header')
 var submitButton = document.getElementById('score')
+var submitButtonClick = document.getElementById('submit-btn')
 var timerId = 0
+var highScoresArray = []
+if (localStorage.getItem("userScores")) {
+    highScoresArray = JSON.parse(localStorage.getItem("userScores"))
+}
 
 var questionElement = document.getElementById('question')
 var answerButtonsElement = document.getElementById('answer-btns')
 
 let shuffledQuestions, currentQuestionIndex
 
-
+submitButtonClick.addEventListener('click', submitScore)
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
@@ -78,12 +83,10 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')   
     } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
+        
         clearInterval(timerId)
         submitButton.classList.remove('hide')
-        
-        
+        questionContainerElement.classList.add('hide') 
     }  
 }
 
@@ -99,6 +102,16 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
+}
+
+function submitScore() {
+    var initialsInput = document.getElementById('submit-initials')
+    var userScore = {
+        initial:initialsInput.value, score:timeRemaining
+    }
+    highScoresArray.push(userScore)
+    localStorage.setItem("userScores", JSON.stringify(highScoresArray))
+    alert("check")
 }
 
 var questions = [

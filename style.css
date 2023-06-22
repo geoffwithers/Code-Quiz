@@ -77,14 +77,10 @@ header {
     border-radius: 5px;
 }
 
-.correct h2 {
+.message h2 {
     display: flex;
     display: inline;
     color: green;
 }
 
-.wrong h2 {
-    display: flex;
-    display: inline;
-    color: red;
-}
+
